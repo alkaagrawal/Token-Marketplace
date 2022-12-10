@@ -1,13 +1,19 @@
-# Sample Hardhat Project
+# Token Marketplace
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+Installation of following libraries is important for running the contracts error-free.
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+mkdir Token
+cd Token
+npm init --yes
+npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox
+npx hardhat
+npm install @openzeppelin/contracts
+npm install dotenv
+```
+
+The test network used for it is Goerli testnet, by adding a Quicknode url and private key in the .env file.
+
+```shell
+npx hardhat run scripts/deploy.js --network goerli
 ```
